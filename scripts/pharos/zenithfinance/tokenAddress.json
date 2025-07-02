@@ -1,0 +1,14 @@
+[
+     {
+          "name": "USDC",
+          "address": "0x72df0bcd7276f2dFbAc900D1CE63c272C4BCcCED"
+     },
+     {
+          "name": "USDT",
+          "address": "0xD4071393f8716661958F766DF660033b3d35fD29"
+     },
+     {
+          "name": "WPHRS",
+          "address": "0x76aaaDA469D23216bE5f7C596fA25F282Ff9b364"
+     }
+]

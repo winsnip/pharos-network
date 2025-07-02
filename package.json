@@ -1,0 +1,17 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "start-officialrpc": "npx hardhat run scripts/main.ts --network pharos-testnet-officialrpc",
+    "start-zantoprpc": "npx hardhat run scripts/main.ts --network pharos-testnet-zantoprpc"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.5.0",
+    "hardhat": "^2.24.0"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "https-proxy-agent": "^7.0.6",
+    "socks-proxy-agent": "^8.0.5"
+  }
+}

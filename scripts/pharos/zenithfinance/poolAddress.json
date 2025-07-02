@@ -1,0 +1,15 @@
+[
+     {
+          "pair": "USDC/USDT",
+          "address": "0x5EB17047d15bb1f6D1B00f591B5F586E0378fe00"
+     },
+     {
+          "pair": "USDC/PHRS",
+          "address": "0xf49FE9a0397b3bD750db14CD039201ac0429369e"
+     },
+     {
+          "pair": "USDT/PHRS",
+          "address": "0x073EbD8F7E6C932CE50a570593666BA60e83Cce2"
+     }
+
+]
