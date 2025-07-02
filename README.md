@@ -41,19 +41,19 @@ mv .env-example .env
 ```
 setup private key
 ```bash
-PRIVATE_KEY=your_private_key_here >> .env
+echo PRIVATE_KEY=your_private_key_here >> .env
 ```
 setup loop count ( how many time you create transaction )
 ```bash
-LOOP_COUNT=your_loop_count_here >> .env
+echo LOOP_COUNT=your_loop_count_here >> .env
 ```
 setup amount in percent, it set for each tx of your asset.
 ```bash
-AMOUNT_IN_PERCENT=1 >> .env
+echo AMOUNT_IN_PERCENT=1 >> .env
 ```
 set timeout in milisecond, it set for waiting before next tx.
 ```bash
-SET_TIMEOUT=60000 >> .env
+echo SET_TIMEOUT=60000 >> .env
 ```
 
 ### 5. Create a New Screen Session
