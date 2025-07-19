@@ -1,0 +1,22 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "start": "npx hardhat run main/main.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.5.0",
+    "hardhat": "^2.24.0",
+    "tsconfig-paths": "^4.2.0",
+    "undici": "^6.21.3"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "ethers": "^6.14.4",
+    "https-proxy-agent": "^7.0.6",
+    "proxy-chain": "^2.5.9",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "socks-proxy-agent": "^8.0.5"
+  }
+}
