@@ -1,6 +1,5 @@
 export const rpcList = {
-     pharos_official: "https://testnet.dplabs-internal.com",
-     pharos_zantop: `https://api.zan.top/node/v1/pharos/testnet/66e34f4bd00a48f5863e8a702cb0fc8b`,
+     pharos_official: "https://testnet.dplabs-internal.com"
 }
 
 export const pharosTokenAddress = [
