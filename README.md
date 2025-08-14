@@ -54,6 +54,20 @@ set timeout in milisecond, it set for waiting next tx. for example below, next t
 echo TIMEOUT_MIN_MS=60000 >> main/.env
 echo TIMEOUT_MAX_MS=120000 >> main/.env
 ```
+setup Autostaking Access token
+open https://autostaking.pro/?env=pharos, connect wallet > open devmode > tab console, paste code below
+```bash
+localStorage.getItem("token")
+```
+copy that value token, then run in terminal
+```bash
+echo AUTOSTAKING_TOKEN="your_token_here" >> main/.env
+```
+
+**Optional** Set Rpc Url
+```bash
+echo RPC_URL=your_rpc_url_here >> main/.env
+```
 
 ### 5. Create a New Screen Session
 
@@ -63,8 +77,108 @@ screen -S pharos
 
 ### 6. Start the Bot
 
+#### Command lists
+
+##### Rwafi Aquaflux
+
 ```bash
-npm run start
+npm run rwafiAquaflux
+```
+
+##### Autostaking
+
+###### faucet
+
+```bash
+npm run autostakingFaucet
+```
+
+###### deposit
+
+```bash
+npm run autostakingDeposit
+```
+
+###### withdraw
+
+```bash
+npm run autostakingWithdraw
+```
+
+##### CFD Trading / Brokex
+
+```bash
+npm run openCfdTrade
+```
+
+##### Faroswap
+
+###### USDC Liquidity
+
+```bash
+npm run faroswapUsdcLiquidity
+```
+
+###### USDT Liquidty
+
+```bash
+npm run faroswapUsdtLiquidty
+```
+
+###### USDC Swap
+
+```bash
+npm run faroswapUsdcSwap
+```
+
+###### WPHRS Swap
+
+```bash
+npm run faroswapWphrsSwap
+```
+
+##### Pharos Name Service
+
+```bash
+npm run pns
+```
+
+##### Primus
+
+```bash
+npm run primus
+```
+
+##### Zenith
+
+###### USDC Liquidity
+
+```bash
+npm run zenithUsdcLiquidity
+```
+
+###### WPHRS Liquidity
+
+```bash
+npm run zenithWphrsLiquidity
+```
+
+###### USDC Swap
+
+```bash
+npm run zenithUsdcSwap
+```
+
+###### USDT Swap
+
+```bash
+npm run zenithUsdtSwap
+```
+
+###### WPHRS Swap
+
+```bash
+npm run zenithWphrsSwap
 ```
 
 ### 7. Detach the Screen Session

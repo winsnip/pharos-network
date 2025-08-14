@@ -1,7 +1,22 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "start": "npx hardhat run main/main.ts"
+    "rwafiAquaflux": "npx hardhat run main/aquaflux/index.ts",
+    "autostakingFaucet": "npx hardhat run main/autostaking/faucet.ts",
+    "autostakingDeposit": "npx hardhat run main/autostaking/depositViaAdvisor.ts",
+    "autostakingWithdraw": "npx hardhat run main/autostaking/withdrawAllVaults.ts",
+    "openCfdTrade": "npx hardhat run main/cfdtrading/index.ts",
+    "faroswapUsdcLiquidity": "npx hardhat run main/faroswap/usdcLiquidity.ts",
+    "faroswapUsdtLiquidty": "npx hardhat run main/faroswap/usdtLiquidity.ts",
+    "faroswapUsdcSwap": "npx hardhat run main/faroswap/usdcSwap.ts",
+    "faroswapWphrsSwap": "npx hardhat run main/faroswap/wphrsSwap.ts",
+    "pns": "npx hardhat run main/pns/index.ts",
+    "primus": "npx hardhat run main/primus/sent.ts",
+    "zenithUsdcLiquidity": "npx hardhat run main/zenithFinance/usdcLiquidity.ts",
+    "zenithWphrsLiquidity": "npx hardhat run main/zenithFinance/wphrsLiquidity.ts",
+    "zenithUsdcSwap": "npx hardhat run main/zenithFinance/usdcSwap.ts",
+    "zenithUsdtSwap": "npx hardhat run main/zenithFinance/usdtSwap.ts",
+    "zenithWphrsSwap": "npx hardhat run main/zenithFinance/wphrsSwap.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
