@@ -1,6 +1,5 @@
 export const rpcList = {
-     pharos_official: "https://testnet.dplabs-internal.com",
-     pharos_zantop: `https://api.zan.top/node/v1/pharos/testnet/66e34f4bd00a48f5863e8a702cb0fc8b`,
+     pharos_official: "https://testnet.dplabs-internal.com"
 }
 
 export const pharosTokenAddress = [
@@ -56,7 +55,10 @@ export const pharosPoolAddressPMMFaroswap = [
                "0xfffcd0e704c621caecc8b8d8892f64706095ce0c",
                "0xff7129709ebd3485c4ed4fef6dd923025d24e730",
                "0xffe9069bbf9beed28c7396c8dabc6523ae0676a6",
-               "0xffd83a7720f01fff1e8dce44878fdccc548f8ff0"
+               "0xffd83a7720f01fff1e8dce44878fdccc548f8ff0",
+               "0xfe503d9e0397880b4c5b44a267d017fcfdb7625e",
+               "0x3c5d785b45865f781cc8a295bec758f4703b6dff",
+               "0xf777486eb6660612f42cbdd1b2289087a52e214a"
           ]
      },
      {
@@ -97,3 +99,12 @@ export const multicallAbi = [
      "function multicall(uint256 deadline, bytes[] data) external payable returns (bytes[] memory)"
 ]
 
+export const tipAbi = [
+  "function tip((uint32,address),(string,string,uint256,uint256[])) external"
+]
+
+export const VaultMulticall_v2Abi = [
+     "function withdrawFromVault(address vault, uint256 assets, address receiver, address owner) payable",
+     "function multicall(bytes[] data)",
+     "function depositToVault(address vault, uint256 assets, address receiver) payable"
+]

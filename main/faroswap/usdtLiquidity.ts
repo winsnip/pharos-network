@@ -7,25 +7,31 @@ import { randomAmount } from "@scripts/utils/amount"
 
 export default async function usdtLiquidityFaros() {
      const env = envLoaded()
-     const usdtAddress = pharosTokenAddress.filter(item => item.name == "USDT")[0].address
-     const wphrsAddress = pharosTokenAddress.filter(item => item.name == "WPHRS_FAROSWAP")[0].address
-     const poolAddresses = pharosPoolAddressPMMFaroswap.filter(item => item.pair == "USDT/WPHRS")[0]
-          
-     for(let poolAddress of poolAddresses.address){
-          let deadline = Math.floor(Date.now() / 1000) + 60 * 10
-          await createLiquidity({
-               poolAddress: poolAddress,
-               tokenIn: usdtAddress,
-               tokenOut: wphrsAddress,
-               deadline,
-               signer: wallet.signer,
-               amountIn_inPercent: env.AMOUNT_IN_PERCENT,
-               provider
-          })
-          let ms = randomAmount({
-               min: env.TIMEOUT_MIN_MS,
-               max: env.TIMEOUT_MAX_MS
-          })
-          await sleep(ms)
+     for (let index = 1; index <= env.LOOP_COUNT; index++) {
+          console.log(`Task lp usdt ${index}/${env.LOOP_COUNT}`)
+          const usdtAddress = pharosTokenAddress.filter(item => item.name == "USDT")[0].address
+          const wphrsAddress = pharosTokenAddress.filter(item => item.name == "WPHRS_FAROSWAP")[0].address
+          const poolAddresses = pharosPoolAddressPMMFaroswap.filter(item => item.pair == "USDT/WPHRS")[0]
+
+          for (let poolAddress of poolAddresses.address) {
+               let deadline = Math.floor(Date.now() / 1000) + 60 * 10
+               await createLiquidity({
+                    poolAddress: poolAddress,
+                    tokenIn: usdtAddress,
+                    tokenOut: wphrsAddress,
+                    deadline,
+                    signer: wallet.signer,
+                    amountIn_inPercent: env.AMOUNT_IN_PERCENT,
+                    provider
+               })
+               let ms = randomAmount({
+                    min: env.TIMEOUT_MIN_MS,
+                    max: env.TIMEOUT_MAX_MS
+               })
+               await sleep(ms)
+          }
      }
+
 }
+
+usdtLiquidityFaros().catch(console.error)
