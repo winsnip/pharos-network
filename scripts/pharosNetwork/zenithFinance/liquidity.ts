@@ -47,19 +47,27 @@ export async function liquidity({
           provider,
           tokenAddress: token0
      })
-     const {symbol: token1Symbol, decimals: token1Decimals} = await tokenBalance({
+     const {symbol: token1Symbol, decimals: token1Decimals, balance: token1Balance} = await tokenBalance({
           address: signer.address,
           provider,
           tokenAddress: token1
      })
 
+     
      const token0ToToken1Scaled = BigInt(Math.floor(token0ToToken1Price * 1e18))
      const amount0Desired = token0Balance / BigInt(`${amountInPercent}00`)
-
+     
      const precision = 10n ** 18n
      const amount0_18dec = amount0Desired * precision / (10n ** BigInt(token0Decimals))
      const amount1_18dec = amount0_18dec * token0ToToken1Scaled / precision
      const amount1Desired = amount1_18dec * (10n ** BigInt(token1Decimals)) / precision
+     
+     console.log(`Supply ${token0Symbol}/${token1Symbol}...`)
+     
+     if(amount1Desired > token1Balance){
+          console.log(`Insufficient ${token1Symbol}!`)
+          return
+     }
 
      const ifaceLiquidity = new Interface(liquidityABI)
 
@@ -95,7 +103,6 @@ export async function liquidity({
 
      const contractRouter = new Contract(router, ifaceLiquidity, signer)
      try {
-          console.log(`Supplying ${token0Symbol}/${token1Symbol}...`)
           const tx = await contractRouter.multicall([encodedMint])
           await tx.wait()
           console.log(`Success! txhash: ${tx.hash}`)
