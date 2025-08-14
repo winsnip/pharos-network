@@ -3,7 +3,7 @@ import ERC20ABI from "@scripts/lib/ERC20.json"
 
 interface ApproveParams {
      tokenAddress: string,
-     ERC20ABI: InterfaceAbi,
+     ERC20ABI?: InterfaceAbi,
      signer: Wallet,
      router: string,
      amount: BigInt
@@ -27,7 +27,7 @@ export async function approve({
                console.log(`Reset tx: ${resetTx.hash}`)
           }
 
-          console.log("Approving new amount to router...")
+          console.log("Approving new amount to spender...")
           const approveTx = await contract.approve(router, amount)
           await approveTx.wait()
           console.log(`Approve tx: ${approveTx.hash}`)
