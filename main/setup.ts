@@ -6,7 +6,7 @@ import path from "path"
 
 const baseDir = path.resolve(__dirname, ".")
 dotenv.config({path: path.resolve(__dirname, ".env")})
-const { AMOUNT_IN_PERCENT, TIMEOUT_MIN_MS, TIMEOUT_MAX_MS, RPC_URL } = process.env
+const { AMOUNT_IN_PERCENT, TIMEOUT_MIN_MS, TIMEOUT_MAX_MS, RPC_URL, LOOP_COUNT } = process.env
 
 export const provider = setupProvider({
      rpcUrl: RPC_URL ?? rpcList.pharos_official
@@ -22,5 +22,7 @@ export function envLoaded(){
      return { 
           AMOUNT_IN_PERCENT: Number(AMOUNT_IN_PERCENT), 
           TIMEOUT_MIN_MS: Number(TIMEOUT_MIN_MS), 
-          TIMEOUT_MAX_MS: Number(TIMEOUT_MAX_MS) }
+          TIMEOUT_MAX_MS: Number(TIMEOUT_MAX_MS),
+          LOOP_COUNT: Number(LOOP_COUNT)
+     }
 }
