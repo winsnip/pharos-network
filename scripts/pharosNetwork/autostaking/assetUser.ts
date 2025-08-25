@@ -14,7 +14,7 @@ export async function assetUser({
      walletAddress
 }: AssetUser) {
      console.log("Fetching user positions...")
-     const assetUrl = `https://asia-east2-auto-staking.cloudfunctions.net/auto_staking_pharos_v6/user/positions?user=${walletAddress}&env=pharos`
+     const assetUrl = `https://asia-east2-auto-staking.cloudfunctions.net/auto_staking_pharos_v7/user/positions?user=${walletAddress}&env=pharos`
      const res = await fetchWithProxyUndici({
           url: assetUrl,
           proxyUrl: PROXY_URL,
