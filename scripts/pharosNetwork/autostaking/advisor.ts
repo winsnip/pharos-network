@@ -25,7 +25,7 @@ export async function advisor({
 }: Advisor) {
      dotenv.config({ path: path.join(baseDir, ".env") })
      const { PROXY_URL = "", AUTOSTAKING_TOKEN = "" } = process.env!
-     const advisorUrl = "https://asia-east2-auto-staking.cloudfunctions.net/auto_staking_pharos_v6/investment/financial-portfolio-recommendation"
+     const advisorUrl = "https://asia-east2-auto-staking.cloudfunctions.net/auto_staking_pharos_v7/investment/financial-portfolio-recommendation"
      const asset = await assetUser({
           PROXY_URL,
           AUTOSTAKING_TOKEN,
