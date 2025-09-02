@@ -193,6 +193,33 @@ npm run rwafiR2Swap
 npm run rwafiR2Earn
 ```
 
+##### Lend and Borrow OpenFi
+
+###### Faucet
+```bash
+npm run openFiFaucet
+```
+
+###### Supply
+```bash
+npm run openFiSupply
+```
+
+###### Borrow
+```bash
+npm run openFiBorrow
+```
+
+###### Repay
+```bash
+npm run openFiRepay
+```
+
+###### Withdraw
+```bash
+npm run openFiWithdraw
+```
+
 ### 7. Detach the Screen Session
 Press: Ctrl + A, then D
 
