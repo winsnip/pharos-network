@@ -213,6 +213,7 @@ Your bot is running in the background on the Pharos Network.
           - https://newshare.bwb.global/en/earnCoinsTasks?uuid=6b728693-35b6-4892-9991-a45e63aaf2a1&_nocache=true&_nobar=true&_needChain=eth
           - https://zan.top/faucet/pharos
           - https://www.gas.zip/
+          - R2 https://discord.com/invite/WYjCvtyh
 - Use at your own risk. Test carefully on testnet.
 - This project for educational and testing purposes only.
 
