@@ -16,7 +16,9 @@
     "zenithWphrsLiquidity": "npx hardhat run main/zenithFinance/wphrsLiquidity.ts",
     "zenithUsdcSwap": "npx hardhat run main/zenithFinance/usdcSwap.ts",
     "zenithUsdtSwap": "npx hardhat run main/zenithFinance/usdtSwap.ts",
-    "zenithWphrsSwap": "npx hardhat run main/zenithFinance/wphrsSwap.ts"
+    "zenithWphrsSwap": "npx hardhat run main/zenithFinance/wphrsSwap.ts",
+    "rwafiR2Swap": "npx hardhat run main/rwafiR2/swap.ts",
+    "rwafiR2Earn": "npx hardhat run main/rwafiR2/earnSavings.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",

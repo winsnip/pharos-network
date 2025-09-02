@@ -181,6 +181,18 @@ npm run zenithUsdtSwap
 npm run zenithWphrsSwap
 ```
 
+##### RWAFI R2
+
+###### Swap
+```bash
+npm run rwafiR2Swap
+```
+
+###### Earn
+```bash
+npm run rwafiR2Earn
+```
+
 ### 7. Detach the Screen Session
 Press: Ctrl + A, then D
 
