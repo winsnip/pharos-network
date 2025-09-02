@@ -18,6 +18,30 @@ export const pharosTokenAddress = [
      {
           "name": "WPHRS_FAROSWAP",
           "address": "0x3019B247381c850ab53Dc0EE53bCe7A07Ea9155f"
+     },
+     {
+          "name": "USDC_R2",
+          "address": "0x8bebfcbe5468f146533c182df3dfbf5ff9be00e2"
+     },
+     {
+          "name": "R2USD",
+          "address": "0x4f5b54d4af2568cefafa73bb062e5d734b55aa05"
+     },
+     {
+          "name": "SR2USD",
+          "address": "0xf8694d25947a0097cb2cea2fc07b071bdf72e1f8"
+     },
+     {
+          "name": "TSLA_OPENFI",
+          "address": "0xa778b48339d3c6b4bc5a75b37c6ce210797076b1"
+     },
+     {
+          "name": "GOLD_OPENFI",
+          "address": "0xaaf03cbb486201099edd0a52e03def18cd0c7354"
+     },
+     {
+          "name": "NVIDIA_OPENFI",
+          "address": "0xaaf3a7f1676385883593d7ea7ea4fccc675ee5d6"
      }
 ]
 
@@ -108,3 +132,91 @@ export const VaultMulticall_v2Abi = [
      "function multicall(bytes[] data)",
      "function depositToVault(address vault, uint256 assets, address receiver) payable"
 ]
+
+export const r2Abi = [
+     "function burn(address _from, uint256 _amount)"
+]
+
+export const openFiAbi = [
+     "function mint(address _asset, address _account, uint256 _amount)",
+     "function supply(address asset, uint256 amount, address onBehalfOf, uint16 referralCode)",
+     "function borrow(address asset, uint256 amount, uint256 interestRateMode, uint16 referralCode, address onBehalfOf)",
+     "function repay(address asset, uint256 amount, uint256 interestRateMode, address onBehalfOf)",
+     "function withdraw(address asset, uint256 amount, address to)"
+]
+
+export const openFiAssets = [
+     {
+          "name": "TSLA_OPENFI",
+          "address": "0xa778b48339d3c6b4bc5a75b37c6ce210797076b1"
+     },
+     {
+          "name": "GOLD_OPENFI",
+          "address": "0xaaf03cbb486201099edd0a52e03def18cd0c7354"
+     },
+     {
+          "name": "NVIDIA_OPENFI",
+          "address": "0xaaf3a7f1676385883593d7ea7ea4fccc675ee5d6"
+     },
+     {
+          "name": "USDC",
+          "address": "0x72df0bcd7276f2dFbAc900D1CE63c272C4BCcCED"
+     },
+     {
+          "name": "USDT",
+          "address": "0xD4071393f8716661958F766DF660033b3d35fD29"
+     }
+]
+
+export const aOpenFiAssets = [
+     {
+          "name": "aNVIDIA",
+          "address": "0x292c051228dcf178ba8ff807aa588916118f6f0b"
+     },
+     {
+          "name": "aGOLD",
+          "address": "0x2efcf933826825d665ee3692537158fb3e744b96"
+     },
+     {
+          "name": "aUSDC",
+          "address": "0x1b7bc4c3f243c41681e96a98ed0e7d2dfc528f00"
+     },
+     {
+          "name": "aTSLA",
+          "address": "0x4e282d1e675162c9f273fadff150dd20f08f5e23"
+     },
+     {
+          "name": "aUSDT",
+          "address": "0x7b60428e984de02d6a67183c30c5c5e1ec5a0458"
+     }
+]
+
+export const debtOpenFiAssets = [
+     {
+          "name": "debt TSLA",
+          "address": "0x64ed58347d4dd2424bccdc3795838e9a5aa117de"
+     },
+     {
+          "name": "debt USDC",
+          "address": "0xb0643e47a36616c5d6573486e3c7e49449628c9c"
+     },
+     {
+          "name": "debt GOLD",
+          "address": "0xaea0f55a9a5941fd815af87c17bbfc94b72a5854"
+     },
+     {
+          "name": "debt NVIDIA",
+          "address": "0x31508dcc0428cc3b2342e6bea16c3d4b4e9f34ad"
+     },
+     {
+          "name": "debt USDT",
+          "address": "0x5244c9452cf3168c55a0423ff946b5ad21b2a934"
+     }
+]
+
+export const bitverseAbi = [
+     "function deposit(address token, uint256 amount)",
+     "function withdraw(address to, uint256 amount)"
+]
+
+export const bitverseListPair = ["BTC-USD", "ETH-USD", "NVDA-USD", "TSLA-USD", "BTBT-USD", "BMNR-USD", "BTCS-USD", "BLSH-USD", "CRCL-USD", "GLXY-USD", "MTPLF-USD", "RIOT-USD", "USDT-USD"]
