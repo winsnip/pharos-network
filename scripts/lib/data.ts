@@ -219,7 +219,19 @@ export const bitverseAbi = [
      "function withdraw(address to, uint256 amount)"
 ]
 
-export const bitverseListPair = ["BTC-USD", "ETH-USD", "NVDA-USD", "TSLA-USD", "BTBT-USD", "BMNR-USD", "BTCS-USD", "BLSH-USD", "CRCL-USD", "GLXY-USD", "MTPLF-USD", "RIOT-USD", "USDT-USD"]
+export const bitverseListPair = [
+     "BTC-USD",
+     "ETH-USD",
+     "NVDA-USD",
+     "TSLA-USD",
+     "BTBT-USD",
+     "BMNR-USD",
+     "BTCS-USD",
+     "BLSH-USD",
+     "CRCL-USD",
+     "GLXY-USD",
+     "RIOT-USD"
+]
 
 export const spoutAssets = [
      {
