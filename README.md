@@ -229,7 +229,7 @@ npm run spoutBuy
 
 ##### Bitverse Trading
 ⚠️ **NOTES** 
-Make sure your account in website has USDT balance. and We had been setup min and max amount for open poisiton between 2 to 5 USDT.
+Make sure your account in website has USDT balance. and We had been setup min and max amount for open position between 2 to 5 USDT.
 
 ###### Open position
 ```bash
