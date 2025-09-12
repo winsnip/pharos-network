@@ -220,3 +220,10 @@ export const bitverseAbi = [
 ]
 
 export const bitverseListPair = ["BTC-USD", "ETH-USD", "NVDA-USD", "TSLA-USD", "BTBT-USD", "BMNR-USD", "BTCS-USD", "BLSH-USD", "CRCL-USD", "GLXY-USD", "MTPLF-USD", "RIOT-USD", "USDT-USD"]
+
+export const spoutAssets = [
+     {
+          "name": "sLQD",
+          "address": "0x54b753555853ce22f66ac8cb8e324eb607c4e4ee"
+     }
+]
