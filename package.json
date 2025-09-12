@@ -23,7 +23,8 @@
     "openFiSupply": "npx hardhat run main/openfi/supply.ts",
     "openFiBorrow": "npx hardhat run main/openfi/borrow.ts",
     "openFiRepay": "npx hardhat run main/openfi/repay.ts",
-    "openFiWithdraw": "npx hardhat run main/openfi/withdraw.ts"
+    "openFiWithdraw": "npx hardhat run main/openfi/withdraw.ts",
+    "spoutBuy": "npx hardhat run main/spout/buy.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",

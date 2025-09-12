@@ -220,6 +220,13 @@ npm run openFiRepay
 npm run openFiWithdraw
 ```
 
+##### Spout RWAFI
+
+##### Buy 
+```bash
+npm run spoutBuy
+```
+
 ### 7. Detach the Screen Session
 Press: Ctrl + A, then D
 
