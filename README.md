@@ -220,6 +220,39 @@ npm run openFiRepay
 npm run openFiWithdraw
 ```
 
+##### Spout RWAFI
+
+###### Buy 
+```bash
+npm run spoutBuy
+```
+
+##### Bitverse Trading
+⚠️ **NOTES** 
+Make sure your account in website has USDT balance. and We had been setup min and max amount for open position between 2 to 5 USDT.
+
+###### Open position
+```bash
+npm run bitverseOpenPosition
+```
+
+if you got error especially in order type Market as example below: 
+```bash
+Opening position long BTCS-USD for 2.16 USDT, Order type: market...
+Failed: Error: transaction execution reverted action="sendTransaction", data=null, reason=null, invocation=null, revert=null, ...
+```
+setup order type to 2 in main/bitverse/openPosition.ts as below:
+```bash
+await openPosition({
+     baseDir,
+     side,
+     pair,
+     provider,
+     signer: wallet.signer,
+     router,
+     orderType: 2 // SETUP HERE
+})
+```
 ### 7. Detach the Screen Session
 Press: Ctrl + A, then D
 
