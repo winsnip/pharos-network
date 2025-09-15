@@ -9,7 +9,7 @@ import path from "path"
 
 const headers = {
         "Accept": "application/json, text/plain, */*",
-        "Accept-Encoding": "gzip, deflate, br, zstd",
+        "Accept-Encoding": "identity",
         "Accept-Language": "en-US,en;q=0.5",
         "Origin": "https://faroswap.xyz",
         "Referer": "https://faroswap.xyz/",
