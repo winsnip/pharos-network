@@ -75,8 +75,8 @@ export async function openPosition({
   const { leverageE2, entryPrice, margin, longOI, shortOI, signTimestamp, sign, marketOpening } = data
 
   const iface = new Interface([
-    "function func_0068(string,uint256,uint256,uint256,uint256,uint256,(address,uint256)[],uint256,uint256,uint256,uint256,uint256,bytes,uint256)"
-  ])
+    "function func_0068(string,uint256,uint256,uint256,uint256,uint256,(address,uint256)[],uint256,uint256,uint256,uint256,uint256,bytes,uint256,uint256)",
+  ]);
   const params = [
     pair,
     parseUnits(entryPrice, decimalsToken),
@@ -96,16 +96,17 @@ export async function openPosition({
     BigInt(shortOI),
     BigInt(signTimestamp),
     sign,
-    marketOpening ? 1n : 0n
+    marketOpening ? 1n : 0n,
+    1n
   ]
   const callData = iface.encodeFunctionData("func_0068", params);
-  const selector = "0x35987122"
+  const selector = "0x12f10a18";
   const newCallData = selector + callData.slice(10)
   console.log(`Opening position ${side == 1 ? "long" : "short"} ${pair} for ${margin[0].amount} ${margin[0].denom}, Order type: ${orderType == 1 ? "market" : "limit"}...`)
   const tx = await signer.sendTransaction({
     to: router,
     data: newCallData,
-    gasLimit: 2_000_000n
+    gasLimit: 5_000_000n
   })
   await tx.wait()
   success({ hash: tx.hash })
