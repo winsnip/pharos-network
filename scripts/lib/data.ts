@@ -1,6 +1,7 @@
 export const rpcList = {
-     pharos_official: "https://testnet.dplabs-internal.com"
-}
+  pharos_official: "https://testnet.dplabs-internal.com",
+  atlantic_pharos_testnet: "https://atlantic.dplabs-internal.com",
+};
 
 export const pharosTokenAddress = [
      {
