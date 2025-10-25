@@ -25,7 +25,8 @@
     "openFiRepay": "npx hardhat run main/openfi/repay.ts",
     "openFiWithdraw": "npx hardhat run main/openfi/withdraw.ts",
     "spoutBuy": "npx hardhat run main/spout/buy.ts",
-    "bitverseOpenPosition": "npx hardhat run main/bitverse/openPosition.ts"
+    "bitverseOpenPosition": "npx hardhat run main/bitverse/openPosition.ts",
+    "atlanticDirectSendToken": "npx hardhat run main/atlantic/sendToken/directOnchain.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
