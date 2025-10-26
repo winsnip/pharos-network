@@ -1,38 +1,55 @@
-import { Contract, InterfaceAbi, Wallet } from "ethers"
-import ERC20ABI from "@scripts/lib/ERC20.json"
+import {
+  Contract,
+  formatEther,
+  InterfaceAbi,
+  parseUnits,
+  Wallet,
+} from "ethers";
+import ERC20ABI from "@scripts/lib/ERC20.json";
 
 interface ApproveParams {
-     tokenAddress: string,
-     ERC20ABI?: InterfaceAbi,
-     signer: Wallet,
-     router: string,
-     amount: BigInt
+  tokenAddress: string;
+  ERC20ABI?: InterfaceAbi;
+  signer: Wallet;
+  router: string;
+  amount: BigInt;
 }
 
 export async function approve({
-     tokenAddress,
-     signer,
-     router,
-     amount
-}:ApproveParams) {
-     const contract = new Contract(tokenAddress, ERC20ABI, signer)
-     console.log("Checking allowance...")
-     const allowance = await contract.allowance(signer.address, router)
-     console.log(allowance.toString())
-     if (allowance < amount) {
-          if (allowance > 0n) {
-               console.log("Resetting allowance to 0 first...")
-               const resetTx = await contract.approve(router, 0n)
-               await resetTx.wait()
-               console.log(`Reset tx: ${resetTx.hash}`)
-          }
+  tokenAddress,
+  signer,
+  router,
+  amount,
+}: ApproveParams) {
+  const contract = new Contract(tokenAddress, ERC20ABI, signer);
+  console.log("Checking allowance...");
+  const allowance = await contract.allowance(signer.address, router);
+  const gasEstimate = await contract.approve.estimateGas(tokenAddress, amount);
+  const feeData = await signer.provider?.getFeeData();
+  const gasPrice =
+    feeData?.maxFeePerGas ?? feeData?.gasPrice ?? parseUnits("0", "gwei");
+  const estimateGas = gasEstimate * gasPrice;
 
-          console.log("Approving new amount to spender...")
-          const approveTx = await contract.approve(router, amount)
-          await approveTx.wait()
-          console.log(`Approve tx: ${approveTx.hash}`)
-     } else {
-          console.log("Sufficient allowance already approved.")
-     }
+  const nativeBalance = await signer.provider?.getBalance(signer.address)!;
+  if (nativeBalance < estimateGas) {
+    const msg = `Insufficient native balance for gas. your balance: ${formatEther(
+      nativeBalance
+    )}, but need at least ${formatEther(estimateGas)}`;
+    throw new Error(msg);
+  }
+  if (allowance < amount) {
+    if (allowance > 0n) {
+      console.log("Resetting allowance to 0 first...");
+      const resetTx = await contract.approve(router, 0n);
+      await resetTx.wait();
+      console.log(`Reset tx: ${resetTx.hash}`);
+    }
 
+    console.log("Approving new amount to spender...");
+    const approveTx = await contract.approve(router, amount);
+    await approveTx.wait();
+    console.log(`Approve tx: ${approveTx.hash}`);
+  } else {
+    console.log("Sufficient allowance already approved.");
+  }
 }
