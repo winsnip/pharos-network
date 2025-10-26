@@ -240,3 +240,13 @@ export const spoutAssets = [
           "address": "0x54b753555853ce22f66ac8cb8e324eb607c4e4ee"
      }
 ]
+
+export const assetoAddresses = [
+  { name: "USDT", contract: "0xe7e84b8b4f39c507499c40b4ac199b050e2882d5" },
+  { name: "CASH+", contract: "0x56f4add11d723412d27a9e9433315401b351d6e3" },
+  { name: "SPENDER", contract: "0x56f4add11d723412d27a9e9433315401b351d6e3" },
+];
+export const assetoAbi = [
+  "function subscribe(address uAddress, uint256 uAmount)",
+  "function redemption(address uAddress, uint256 tokenAmount)",
+];
