@@ -253,6 +253,38 @@ await openPosition({
      orderType: 2 // SETUP HERE
 })
 ```
+
+#### -Atlantic- 
+
+##### Send Token To Friends
+
+###### Setup PHAROS_TOKEN
+open https://testnet.pharosnetwork.xyz/experience, connect wallet > open devmode > tab console, paste code below
+```bash
+localStorage.getItem("PHAROS_AUTHORIZATION_TOKEN")
+```
+copy that value token, then run in terminal
+```bash
+echo PHAROS_TOKEN=your_token_here >> main/.env
+```
+
+###### coomand send token
+```bash
+npm run atlanticDirectSendToken
+```
+
+##### Asseto
+
+###### Subscription
+```bash
+npm run atlanticSubscribeAsseto
+```
+
+###### Redemption
+```bash
+npm run atlanticRedemptionAsseto
+```
+
 ### 7. Detach the Screen Session
 Press: Ctrl + A, then D
 
