@@ -26,7 +26,9 @@
     "openFiWithdraw": "npx hardhat run main/openfi/withdraw.ts",
     "spoutBuy": "npx hardhat run main/spout/buy.ts",
     "bitverseOpenPosition": "npx hardhat run main/bitverse/openPosition.ts",
-    "atlanticDirectSendToken": "npx hardhat run main/atlantic/sendToken/directOnchain.ts"
+    "atlanticDirectSendToken": "npx hardhat run main/atlantic/sendToken/directOnchain.ts",
+    "atlanticSubscribeAsseto": "npx hardhat run main/atlantic/rwafi/subcribeAsseto.ts",
+    "atlanticRedemptionAsseto": "npx hardhat run main/atlantic/rwafi/redemptionAsseto.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
