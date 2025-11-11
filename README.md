@@ -302,6 +302,23 @@ npm run atlanticFaroswapNative
 npm run atlanticFaroswapToken
 ```
 
+##### Bitverse
+
+###### Deposit
+```bash
+npm run atlanticBitverseDeposit
+```
+
+###### Open position
+```bash
+npm run atlanticBitverseOpenPosition
+```
+
+###### Withdraw
+```bash
+npm run atlanticBitverseWithdraw
+```
+
 ### 7. Detach the Screen Session
 Press: Ctrl + A, then D
 
