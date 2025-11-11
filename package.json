@@ -28,7 +28,10 @@
     "bitverseOpenPosition": "npx hardhat run main/bitverse/openPosition.ts",
     "atlanticDirectSendToken": "npx hardhat run main/atlantic/sendToken/directOnchain.ts",
     "atlanticSubscribeAsseto": "npx hardhat run main/atlantic/rwafi/subcribeAsseto.ts",
-    "atlanticRedemptionAsseto": "npx hardhat run main/atlantic/rwafi/redemptionAsseto.ts"
+    "atlanticRedemptionAsseto": "npx hardhat run main/atlantic/rwafi/redemptionAsseto.ts",
+    "atlanticFaroswapLP": "npx hardhat run main/atlantic/faroswap/createRandomLp.ts",
+    "atlanticFaroswapNative": "npx hardhat run main/atlantic/faroswap/swapNative.ts",
+    "atlanticFaroswapToken": "npx hardhat run main/atlantic/faroswap/swapTokenToToken.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
