@@ -285,6 +285,23 @@ npm run atlanticSubscribeAsseto
 npm run atlanticRedemptionAsseto
 ```
 
+##### Faroswap
+
+###### Create Random LP
+```bash
+npm run atlanticFaroswapLP
+```
+
+###### Swap coin native
+```bash
+npm run atlanticFaroswapNative
+```
+
+###### Swap token to token
+```bash
+npm run atlanticFaroswapToken
+```
+
 ### 7. Detach the Screen Session
 Press: Ctrl + A, then D
 
