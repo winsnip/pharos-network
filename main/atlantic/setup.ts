@@ -17,10 +17,12 @@ export const wallet = ownAddress({
 
 export function envLoaded() {
   dotenv.config({ path: path.resolve(__dirname, "../.env") });
-  const { AMOUNT_IN_PERCENT, TIMEOUT_MIN_MS, TIMEOUT_MAX_MS } = process.env!;
+  const { AMOUNT_IN_PERCENT, TIMEOUT_MIN_MS, TIMEOUT_MAX_MS, LOOP_COUNT } =
+    process.env!;
   return {
     AMOUNT_IN_PERCENT: Number(AMOUNT_IN_PERCENT),
     TIMEOUT_MIN_MS: Number(TIMEOUT_MIN_MS),
     TIMEOUT_MAX_MS: Number(TIMEOUT_MAX_MS),
+    LOOP_COUNT: Number(LOOP_COUNT),
   };
 }
