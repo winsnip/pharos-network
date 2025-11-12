@@ -63,15 +63,16 @@ export async function openPosition({
     }).toFixed(2)
   );
   if (amount < 2 || Number(availableBalanceSize) < 2) {
-    console.log(
+    throw Error(
       `Minimum order amount 2 ${coinName}! your balance: ${availableBalanceSize} ${coinName}, Open https://testnet.bitverse.zone/app/ to deposit or sync your account!`
     );
-    return;
   }
   if (amount > Number(availableBalanceSize)) {
-    `Insufficient balance for open position: selected margin: ${amount} ${coinName}, your balance: ${Number(
-      availableBalanceSize
-    )} ${coinName}`;
+    throw Error(
+      `Insufficient balance for open position: selected margin: ${amount} ${coinName}, your balance: ${Number(
+        availableBalanceSize
+      )} ${coinName}`
+    );
   }
   const data = await getData({
     marginAmount: amount.toString(),
